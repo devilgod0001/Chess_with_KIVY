@@ -1,0 +1,98 @@
+#:import Press_events_funs Press_events_funs
+#:import rgb_from_hex kivy.utils.get_color_from_hex
+#:import b tryvars.b
+#:import h tryvars.h
+#:import posns tryvars.posns
+
+<Clickable>:
+    size_hint: None, None
+    size: ((b-(14+8))/8)-10, ((b-(14+8))/8)-10 #root.width , root.height
+    pos: 0, (h-b)/2
+
+<Horse>:
+    canvas:
+        PushMatrix
+        Translate:
+            xy: -self.x, -self.y #-8.75, -self.y
+        # Color:
+        #     rgb: rgb_from_hex("#000000")#does nothing
+        Rectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.width, self.height
+            source: "Assets\Images\Horse.png"
+        PopMatrix
+
+<King>:
+    canvas:
+        PushMatrix
+        Translate:
+            xy: -self.x, -self.y #-8.75, -self.y
+        # Color:
+        #     rgb: rgb_from_hex("#000000")
+        Rectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.width, self.height
+            source: "Assets\Images\King.png"
+        PopMatrix
+
+
+<Camel>:
+    canvas:
+        PushMatrix
+        Translate:
+            xy: -self.x, -self.y #-8.75, -self.y
+        # Color:
+        #     rgb: rgb_from_hex("#00FF00")
+        Rectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.width, self.height
+            source: "Assets\Images\Camel.png"
+        PopMatrix
+
+
+<Elephant>:
+    canvas:
+        PushMatrix
+        Translate:
+            xy: -self.x, -self.y #-8.75, -self.y
+        # Color:
+        #     rgb: rgb_from_hex("#00FF00")
+        Rectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.width, self.height
+            source: "Assets\Images\Elephant.png"
+        PopMatrix
+
+
+<Queen>:
+    canvas:
+        PushMatrix
+        Translate:
+            xy: -self.x, -self.y #-8.75, -self.y
+        # Color:
+        #     rgb: rgb_from_hex("#00FF00")
+        # RoundedRectangle:
+        #     pos: self.pos[0], self.pos[1]
+        #     size: self.width, self.height
+        #     segments: 1
+        #     radius: [4]
+        Rectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.width, self.height
+            source: "Assets\Images\Queen.png"
+        PopMatrix
+
+<Soldier>:
+    canvas:
+        PushMatrix
+        Translate:
+            xy: -self.x, -self.y #-8.75, -self.y
+        # Color:
+        #     rgb: rgb_from_hex("#00FF00")
+        Rectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.width, self.height
+            source: "Assets\Images\Soldier.png"
+        PopMatrix
+
+#<Soldier>

@@ -1,0 +1,87 @@
+#:import Boxes_color tryvars.Boxes_color
+
+
+<TryButton@RelativeLayout>:
+    canvas.after:
+        PushMatrix
+        Color:
+            rgba: rgb_from_hex(Boxes_color) #GRID_BOX_COLOR
+        Translate:
+            xy: self.x, self.y  #VERY VERY IMPORTANT LINE
+        RoundedRectangle:
+            size: self.width, self.height
+            radius: [4]
+            segments: 1
+        PopMatrix
+
+<MainGame@GridLayout>:
+    # size_hint: None, None
+    # size: root.width, root.width
+    rows:8
+    cols:8
+    spacing:2
+    padding:4
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:
+    TryButton:

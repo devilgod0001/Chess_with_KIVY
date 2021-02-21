@@ -1,0 +1,20 @@
+#:import rgba kivy.utils.get_color_from_hex
+##:set cell_width ((root.width/8)-(root.width*(2/45)))
+##:set cell_height ((root.height/8)-(root.width*(2/45)))
+<Horse@Button>
+<Myscreen>:
+    canvas:
+        Color:
+            id:Color
+            rgba: root.valueval
+        Ellipse:
+            size: (root.width/8)-(root.width*(2/45)), (root.width/8)-(root.width*(2/45))
+            pos: 40, 40
+
+    Horse:
+        id: horse
+        cell_width:((root.width/8)-(root.width*(2/45)))/root.width
+        cell_height:((root.width/8)-(root.width*(2/45)))/root.height
+        size_hint: self.cell_width, self.cell_height
+        background_color: rgba("#7A9CC6FF")
+        pos: 100, 100

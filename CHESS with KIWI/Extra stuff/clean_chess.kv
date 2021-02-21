@@ -1,0 +1,111 @@
+#:import rgba kivy.utils.get_color_from_hex
+<FirstLayout@FloatLayout>
+<SecondLayout@FloatLayout>
+<ColoredButton@Button>:
+    background_color: rgba("A4031F")
+<GameScreen>: #gamescreen is a floatlayout class only difference is,
+            # now we are updating or using our own class instead of floatlayout
+            #by inheriting from it
+    page: 5
+    border: 120
+    swipe_threshold: .2
+
+    FirstLayout:
+        Label:
+            size_hint: 0.5,0.5
+            pos: 200,200
+            Image:
+                source: "kdblack with gradient.png"
+                allow_stretch: True
+                #size_hint: 0.5, 0.5
+                #pos_hint: {"x":0.1, "top":0.9}
+                #color: 1,1,1,1 #controll colors, as much less value->that much that color will be less
+                #mipmap: True #decrease pixelation of low quality image(overall makes better)
+        ColoredButton:
+            text: "FL1"
+            pos_hint: {"x":0.2, "top":0.2}
+            size_hint: (0.2, None)
+            height: 60
+        ColoredButton:
+            text: "FL2"
+            pos_hint: {"right":1, "y":0.5}
+            size_hint: (None, None)
+            height: 60
+            width: 100
+    RelativeLayout:
+        ColoredButton:
+            text: "RL1"
+            pos: 0,0
+            size_hint: 0.1,0.1
+        ColoredButton:
+            text: "RL2"
+            pos_hint: {"right":1, "y":0.3} #right tells how much distance
+            size_hint: 0.2,0.2             #from left edge of window
+    GridLayout:
+        cols: 2
+        rows: 2
+        spacing: 5
+        padding: 20
+        ColoredButton:
+            text: "GL1"
+            pos: 50,50
+        ColoredButton:
+            text: "GL2"
+        ColoredButton:
+            text: "GL3"
+        ColoredButton:
+            text: "GL4"
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "bottom"
+        ColoredButton:
+            text: "AL1"
+            size_hint: 0.6, 0.6
+        ColoredButton:
+            text: "AL2"
+            size_hint: 0.2,0.2
+    BoxLayout: #every widget gets equal space in respective orientation
+        orientation: "horizontal"
+        ColoredButton:
+            text: "BL1"
+            pos_hint: {"y":0.7}
+            #in vertical orientation, y doesn't do anything;in horizontal, x do nothing
+            size_hint: 1,1
+        ColoredButton:
+            text: "BL2"
+        ColoredButton:
+            text: "BL3"
+    StackLayout:
+        orientation: "lr-bt"
+        padding:30
+        ColoredButton:
+            text: "SL1"
+            size_hint: 0.3,0.2
+        ColoredButton:
+            text: "SL2"
+            size_hint: 0.1,0.05
+        ColoredButton:
+            text: "SL3"
+            size_hint: 0.4,0.1
+        ColoredButton:
+            text: "SL4"
+            size_hint: 0.25,0.25
+    SecondLayout:
+        #Label:
+            #Image:
+            #    source: "kdblack with gradient.png"
+            #    allow_stretch: True
+            #    center_x: root.width/2
+            #    center_y: root.height/2
+            #    size_hint: 0.8, 0.8
+        ColoredButton:
+            text: "SecondLayout"
+            size_hint: 0.3, 0.2
+            pos_hint: {"x":0.3, "y":0.3}
+        ColoredButton:
+            text: "के कर रया है?" #Unicode is not defined for this!!
+            size_hint: 0.4, 0.4
+            pos_hint: {"x":0.4, "y":0.5}
+    #canvas:  #not able to bcoz canvas does not fit in pagelayout
+        #Image:
+            #source: "Soldier.png"

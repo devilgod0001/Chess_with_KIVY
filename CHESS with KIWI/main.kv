@@ -1,0 +1,240 @@
+#:import board_array mainvars.board_array
+#:import current_positions mainvars.current_positions
+#:import per_image_side mainvars.per_image_side
+#: import ew kivy.uix.effectwidget
+
+<Gamescreen>:
+    Image:
+        source: 'Assets/Images/back.jpg'
+        size:root.width, root.height
+        pos:0,0
+    ChessBoard:
+    King_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_King'
+        pos: current_positions[self.name]
+    Queen_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_Queen'
+        pos: current_positions[self.name]
+    Knight_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_L_Knight'
+        pos: current_positions[self.name]
+    Knight_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_R_Knight'
+        pos: current_positions[self.name]
+    Bishop_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_L_Bishop'
+        pos: current_positions[self.name]
+    Bishop_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_R_Bishop'
+        pos: current_positions[self.name]
+    Rook_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_L_Rook'
+        pos: current_positions[self.name]
+    Rook_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_R_Rook'
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_1_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_2_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_3_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_4_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_5_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_6_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_7_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_w:
+        size_hint:None, None
+        size:per_image_side,per_image_side
+        name:'W_8_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+
+############################################################
+############################################################
+
+    King_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_King'
+        pos: current_positions[self.name]
+    Queen_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_Queen'
+        pos: current_positions[self.name]
+    Knight_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_L_Knight'
+        pos: current_positions[self.name]
+    Knight_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_R_Knight'
+        pos: current_positions[self.name]
+    Bishop_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_L_Bishop'
+        pos: current_positions[self.name]
+    Bishop_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_R_Bishop'
+        pos: current_positions[self.name]
+    Rook_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_L_Rook'
+        pos: current_positions[self.name]
+    Rook_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_R_Rook'
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_1_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_2_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_3_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_4_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_5_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_6_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_7_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+    Pawn_b:
+        size_hint:None, None
+        size:per_image_side, per_image_side
+        name:'B_8_Pawn'
+        first_move: True
+        pos: current_positions[self.name]
+
+    Button:
+        pos:40,40
+        size_hint:None,None
+        size:40,40
+        font_name: 'bubble & soap'
+        font_size: 20
+        text: 'Menu'
+        # background_normal: 'Assets\Images\button.png'
+        # background_down: 'Assets\Images\button_down.png'
+        on_press:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'Mainmenu'
+
+
+<Mainmenu>:
+    Image:
+        source: 'Assets/Images/back.jpg'
+        size:root.width, root.height
+        pos:0,0
+    GridLayout:
+        pos: 20,root.height/2
+        size_hint:None,None
+        size:root.width-40,100
+        padding: 3
+        spacing: 5
+        rows:1
+        cols:2
+        Button:
+            text:"Black"
+            font_name: 'bubble & soap'
+            font_size: 40
+            on_press:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'Gamescreen'
+        Button:
+            text:"White"
+            font_color: 1,1,1,1
+            font_name: 'bubble & soap'
+            font_size: 40
+            on_press:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'Gamescreen'
+    Button:
+        background_normal: 'button.png'
+        background_down: 'button_down.png'
+        size_hint:None,None
+        size: 100,100
+        pos: 20,20

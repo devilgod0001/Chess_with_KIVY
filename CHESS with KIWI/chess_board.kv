@@ -1,0 +1,57 @@
+#:import board_grid_color mainvars.board_grid_color
+#:import board_grid_shadow_color mainvars.board_grid_shadow_color
+#:import rgba_from_hex kivy.utils.get_color_from_hex
+#:import shadow_margin_pixel_x mainvars.shadow_margin_pixel_x
+#:import shadow_margin_pixel_y mainvars.shadow_margin_pixel_y
+#:import grid_radius mainvars.grid_radius
+#:import grid_segments mainvars.grid_segments
+#:import mgn_wrt360 mainvars.mgn_wrt360
+#:import pdd_wrt360 mainvars.pdd_wrt360
+#:import w mainvars.w
+#:import h mainvars.h
+#:import back_color mainvars.back_color
+
+<GridButton>:
+    canvas.after:
+        PushMatrix
+        #shadow
+        Color:
+            rgba: rgba_from_hex(board_grid_shadow_color)
+        Translate:
+            xy: self.x + shadow_margin_pixel_x, self.y + shadow_margin_pixel_y
+        # Line:
+        #     width: 2
+        #     rectangle: (3,3,self.width,self.height)
+        RoundedRectangle:
+            # size: self.width, self.height
+            size: self.width + (-2*shadow_margin_pixel_x), self.height + (-2*shadow_margin_pixel_y)
+            radius: [grid_radius]
+            segments: grid_segments
+
+        # mainbox
+        Color:
+            rgba: rgba_from_hex(board_grid_color)
+        Translate:
+            xy: -shadow_margin_pixel_x, -shadow_margin_pixel_y
+        RoundedRectangle:
+            size: self.width, self.height
+            radius: [grid_radius-3]
+            segments: grid_segments
+        PopMatrix
+
+<ChessBoard>:
+    size_hint: None, None
+    size: w, w
+    pos: 0,(h-w)/2
+
+    canvas.before:
+        PushMatrix
+        Color:
+            rgba: rgba_from_hex(back_color)
+        Translate:
+            xy: 0,(h-w)/2
+        RoundedRectangle:
+            size: w, w
+            radius: [grid_radius]
+            segments: grid_segments
+        PopMatrix

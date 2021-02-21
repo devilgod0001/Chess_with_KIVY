@@ -1,0 +1,99 @@
+#:import board_array mainvars.board_array
+#:import per_image_side mainvars.per_image_side
+#:import rgba_from_hex kivy.utils.get_color_from_hex
+
+<King_w@Clickable_char>:
+    canvas:
+        Color:  #to prevent images of chess pieces not to adopt color from background
+            rgba: rgba_from_hex('#ffffff')
+        # RoundedRectangle:
+        #     pos: self.pos[0]+(7/2), self.pos[1]+(7/2)
+        #     size: per_image_side-7, per_image_side-7
+        #     segments: 10
+        #     radius: [3]
+        # PopMatrix
+
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\White\King_w.png"
+
+<Queen_w@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\White\Queen_w.png"
+
+<Bishop_w@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\White\Bishop_w.png"
+
+<Knight_w@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\White\Knight_w.png"
+
+<Rook_w@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\White\Rook_w.png"
+
+<Pawn_w@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\White\Pawn_w.png"
+
+##############################################################################
+##############################################################################
+
+<King_b@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\Black\King_b.png"
+
+<Queen_b@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\Black\Queen_b.png"
+
+<Bishop_b@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\Black\Bishop_b.png"
+
+<Knight_b@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\Black\Knight_b.png"
+
+<Rook_b@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\Black\Rook_b.png"
+
+<Pawn_b@Clickable_char>:
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: per_image_side, per_image_side
+            source: "Assets\Images\Black\Pawn_b.png"

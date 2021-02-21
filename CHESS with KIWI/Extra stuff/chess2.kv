@@ -1,0 +1,22 @@
+<ColoredButton>:
+    size_hint: 0.1, 0.1
+
+<MainMenuScreen>:
+    Label:
+        id:timetime
+        text: ""
+        pos_hint: {"x":0.1, "y":0.2}
+        markup: True
+        font_size: 25
+
+    ColoredButton:
+        pos_hint: {"left":0.0} #only 'pos' will take a tuple/list with 2 values x,y
+        text:"1"
+        background_color: 0.0625,0.0625,0.59765625,1
+    ColoredButton:
+        id:btn2
+        pos_hint: {"x":0.1}
+        text:"2"
+        on_press:root.changenameonpress()
+        on_release:root.changenameonrelease()
+        background_color: 0.0625,0.0625,0.59765625,1

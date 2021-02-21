@@ -1,0 +1,95 @@
+#:import rgb_from_hex kivy.utils.get_color_from_hex
+#:import b tryvars.b
+#:import h tryvars.h
+#:import DefaultPos tryvars.Default_Pos
+#:import posns tryvars.posns
+#:import Board_color tryvars.Board_color
+
+
+
+<Cancan>:
+    MainGame:
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        size_hint: None, None
+        size: root.width, root.width
+        canvas.before:
+            PushMatrix
+            Color:
+                rgba: rgb_from_hex(Board_color) #BACKGROUND_BOX_COLOR2E2E3A
+            Translate:
+                xy: self.x, self.y-20
+            RoundedRectangle:
+                size: self.width, self.height+20
+                segments:40
+            PopMatrix
+    Horse:
+        name: "HorseL"
+        pos: DefaultPos[self.name]
+
+    Horse:
+        name: "HorseR"
+        pos: DefaultPos[self.name]
+
+    King:
+        name: "King"
+        pos: DefaultPos[self.name]
+
+    Camel:
+        name: "CamelL"
+        pos: DefaultPos[self.name]
+
+    Camel:
+        name: "CamelR"
+        pos: DefaultPos[self.name]
+
+    Elephant:
+        name: "ElephantL"
+        pos: DefaultPos[self.name]
+
+    Elephant:
+        name: "ElephantR"
+        pos: DefaultPos[self.name]
+
+    Queen:
+        name: "Queen"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier1"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier2"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier3"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier4"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier5"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier6"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier7"
+        pos: DefaultPos[self.name]
+
+    Soldier:
+        first_move: True
+        name: "Soldier8"
+        pos: DefaultPos[self.name]
